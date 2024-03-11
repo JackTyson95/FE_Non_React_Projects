@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+    <style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f9de59;
+        margin: 0;
+    }
+
+    .container{
+        border: 1px solid #1e2923;
+        padding: 30px;
+        background-color: #45a247;
+        border-radius: 10px;
+        box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+    }
+
+    h2{
+        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    #result{
+        height: 40px;
+        background-color: white;
+        margin-bottom: 20px;
+        padding: 10px;
+        color: black;
+        font-size: 20px;
+    }
+
+    .buttonGrid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .buttonGrid button{
+        padding: 10px;
+        font-size: 20px;
+    }
+	
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculator</h2>
+
+        <div id="result">0</div>
+
+        <div class="buttonGrid">
+            <button type="button" onclick="addNumber('1')">1</button>
+            <button type="button" onclick="addNumber('2')">2</button>
+            <button type="button" onclick="addNumber('3')">3</button>
+            <button type="button" onclick="calculate('add')">+</button>
+            <button type="button" onclick="addNumber('4')">4</button>
+            <button type="button" onclick="addNumber('5')">5</button>
+            <button type="button" onclick="addNumber('6')">6</button>
+            <button type="button" onclick="calculate('subtract')">-</button>
+            <button type="button" onclick="addNumber('7')">7</button>
+            <button type="button" onclick="addNumber('8')">8</button>
+            <button type="button" onclick="addNumber('9')">9</button>
+            <button type="button" onclick="calculate('multiply')">*</button>
+            <button type="button" onclick="calculate('divide')">/</button>
+            <button type="button" onclick="addNumber('0')">0</button>
+            <button type="button" onclick="clearDisplay()">C</button>
+            <button type="button" onclick="calculateResult()">=</button>
+        </div>
+
+    </div>
+    <script src="Calculator.js"></script>
+</body>
+</html>
